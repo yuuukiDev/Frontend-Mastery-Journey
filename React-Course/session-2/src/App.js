@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Welcome from './components/Welcome';
+import Product from './components/Product';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello, World!</h1>
+      <Welcome name="Mohamed" country="EGYPT"/>
+      <Product product_name="RTX 4090" product_description="Powerful GPU for Gaming" product_price="2000$" product_release_date="2023"/>
+      <Product product_name="RTX 4080" product_description="Powerful GPU for Gaming" product_price="1200$" product_release_date="2022"/>
+      <Product product_name="RTX 4070" product_description="Powerful GPU for Gaming" product_price="599$" product_release_date="2023"/>
     </div>
   );
 }
