@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const CounterFc = () => {
-    const [counter, setCounter] = useState(0);
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+        document.title = `You Clicked ${count} Times.`;
+    })
 
     return (
         <>
         <h1>Using Hooks</h1>
-        <h1>Counter:{counter}</h1>
-        <button onClick={() => setCounter(counter + 1)}>Add</button>
+        <h1>Counter:{count}</h1>
+        <button onClick={() => setCount(count + 1)}>Add</button>
         </>
     )
 }
